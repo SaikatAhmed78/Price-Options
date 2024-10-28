@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import Feature from "../Feature/Feature";
 
+
 const Price = ({option}) => {
 
     const {name, features, price} = option
@@ -8,7 +9,7 @@ const Price = ({option}) => {
     return (
         <div className="bg-blue-500 flex flex-col rounded-lg p-4 text-white">
             <h2 className="text-center">
-                <span className="text-7xl font-extrabold">{price}</span>
+                <span className="text-7xl font-extrabold">${price}</span>
                 <span className="text-2xl font-semibold">/mon</span>
             </h2>
             <h4 className="text-3x text-center font-bold my-8">{name}</h4>
