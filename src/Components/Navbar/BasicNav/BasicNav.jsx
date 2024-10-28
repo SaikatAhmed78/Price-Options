@@ -16,7 +16,7 @@ const [open, setOpen] = useState(false)
       
       
     return (
-        <nav>
+        <nav className="text-black bg-yellow-300 p-6">
             
             <div className="md:hidden text-2xl" onClick={()=> setOpen(!open)}>
                 {
@@ -27,7 +27,7 @@ const [open, setOpen] = useState(false)
                 }
             </div>
 
-          <ul className="md:flex">
+          <ul className={`md:flex duration-1000 absolute md:static bg-yellow-300 px-6 ${open ? 'top-12' : '-top-60'}`}>
           {
                 routes.map(route => <Link key={route.id} route={route}></Link>)
             }

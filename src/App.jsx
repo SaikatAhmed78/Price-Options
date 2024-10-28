@@ -1,6 +1,7 @@
 import './App.css'
 import BasicNav from './Components/Navbar/BasicNav/BasicNav'
-import Navbar from './Components/Navbar/Navbar'
+import PriceOption from './Components/Navbar/PriceOption/PriceOption'
+// import Navbar from './Components/Navbar/Navbar'
 
 function App() {
 
@@ -8,8 +9,9 @@ function App() {
     <>
       
       <BasicNav></BasicNav>
-      <Navbar></Navbar>
-      <h1>Vite + React</h1>
+      {/* <Navbar></Navbar> */}
+      <h1 className='text-2xl bg-fuchsia-400'>Vite + React</h1>
+      <PriceOption></PriceOption>
       
     </>
   )
