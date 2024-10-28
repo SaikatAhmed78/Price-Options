@@ -1,7 +1,7 @@
 import Price from "../../Price/Price";
 
 
-const PriceOptions = () => {
+const PriceOption = () => {
 
     const priceOptions = [
         {
@@ -49,32 +49,18 @@ const PriceOptions = () => {
                 "Free gym merchandise upon signup"
             ]
         },
-        {
-            "id": 4,
-            "name": "Family Membership",
-            "price": 120,
-            "features": [
-                "Access for up to 4 family members",
-                "Unlimited group classes for all members",
-                "Free fitness assessments for all members",
-                "Access to locker rooms",
-                "2 personal training sessions per month for each member",
-                "Discount on family workshops",
-                "Family fitness events",
-                "Monthly family fitness challenges",
-                "Access to kids' activities during workout sessions"
-            ]
-        }
     ]
 
 
     return (
-        <div>
+        <div className="m-12">
             <h2 className="text-5xl">Best Prices In The Town</h2>
 
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
             {
                 priceOptions.map(option => <Price option={option} key={option.id}> </Price>)
             }
+            </div>
         </div>
     );
 };

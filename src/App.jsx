@@ -1,5 +1,5 @@
 import './App.css'
-import BasicNav from './Components/Navbar/BasicNav/BasicNav'
+import BasicNav from './Components/BasicNav/BasicNav'
 import PriceOption from './Components/Navbar/PriceOption/PriceOption'
 // import Navbar from './Components/Navbar/Navbar'
 
