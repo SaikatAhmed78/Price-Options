@@ -1,8 +1,11 @@
+import { useState } from "react";
 import Link from "../Link/Link";
+import { MdMenu,} from "react-icons/md";
+import { FaRegWindowClose } from "react-icons/fa";
 
 
 const BasicNav = () => {
-
+const [open, setOpen] = useState(false)
     const routes = [
         { id: 1, path: "/", name: "Home" },
         { id: 2, path: "/about", name: "About" },
@@ -14,6 +17,16 @@ const BasicNav = () => {
       
     return (
         <nav>
+            
+            <div className="md:hidden text-2xl" onClick={()=> setOpen(!open)}>
+                {
+                    open === true ? 
+                   <FaRegWindowClose></FaRegWindowClose>
+                    :  <MdMenu></MdMenu>
+           
+                }
+            </div>
+
           <ul className="md:flex">
           {
                 routes.map(route => <Link key={route.id} route={route}></Link>)
